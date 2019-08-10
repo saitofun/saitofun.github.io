@@ -190,6 +190,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/golang-result-of-channel-operations/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Saito">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sincos">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/10/golang-result-of-channel-operations/" class="post-title-link" itemprop="url">golang - result of channel operations</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-10 14:28:09 / Modified: 14:38:40" itemprop="dateCreated datePublished" datetime="2019-08-10T14:28:09+08:00">2019-08-10</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <table>
+<thead>
+<tr>
+<th align="left">operation</th>
+<th align="left">channel status</th>
+<th align="left">result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">read</td>
+<td align="left">nil</td>
+<td align="left">block</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">open &amp; not empty</td>
+<td align="left">value</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">open &amp; empty</td>
+<td align="left">block</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">closed</td>
+<td align="left">default value, false</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">write only</td>
+<td align="left">compilation error</td>
+</tr>
+<tr>
+<td align="left">write</td>
+<td align="left">nil</td>
+<td align="left">block</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">open &amp; full</td>
+<td align="left">block</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">open &amp; not full</td>
+<td align="left">write value</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">closed</td>
+<td align="left">panic</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">receive only</td>
+<td align="left">compilation error</td>
+</tr>
+<tr>
+<td align="left">closed</td>
+<td align="left">nil</td>
+<td align="left">panic</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">open &amp; not empty</td>
+<td align="left">channel closed; read succeed until channel is drained</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">open &amp; empty</td>
+<td align="left">channel closed; reads produces default value</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">closed</td>
+<td align="left">panic</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">receive only</td>
+<td align="left">compilation error</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/distribution-system-component-lists/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -356,7 +519,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
